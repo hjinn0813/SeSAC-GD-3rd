@@ -1,4 +1,4 @@
-# SeSAC 강동 3기 프론트엔드 입문과정 코드 저장소
+# SeSAC 강동 3기 프론트엔드 입문과정 코드 저장소 👩‍💻
 Git, GitHub, HTML, CSS, JavaScript 학습하며 실습한 내용
 
 ## 프로젝트 소개
