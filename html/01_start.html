@@ -1,0 +1,43 @@
+<!-- ctrl+슬래시로 주석을 달 수 있다. 브라우저에서는 안 보임! -->
+
+<!DOCTYPE html> 
+<!-- html5 문서로 작성했음을 의미 (html 1,2,3,4 마다 의미가 다르다) -->
+<!-- DOCTYPE은 document type의 약자, 웹 문서가 어떤 형식으로 작성될 것인지 선언 -->
+
+<html lang="ko"> <!-- 페이지의 기본 언어 속성. ko 한국어, en 영어 -->
+  <head>  <!-- 내부 정보들이 브라우저에서 보이지 않는다. 스타일이나 페이지 정보 포함 -->
+    <meta charset="UTF-8">  <!-- 인코딩 방식 지정 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- viewport는 반응형에서 자동으로 인식하는..? -->
+    <title>문서의 제목</title>  <!-- 문서의 제목 (탭에 표시되는 부분) -->
+  </head>
+  
+  <!-- 브라우저에서 실제로 보여지는 부분 -->
+  <!-- start tag, end tag 사이에 넣고 싶은 내용 작성 -->
+  <!-- 태그명+tab = 여는 태그와 닫는 태그 자동 완성 -->
+  <!-- 중첩 nested = 부모,자식,상위,하위 요소로 태그를 구분 -->
+  <body>
+    <!-- h1~6 제목 태그 (글자 크고 볼드체로) -->
+    <!-- h1은 html에서 1번만 사용 -->
+    <h1>첫 HTML 문서</h1>
+    <h2>첫 HTML 문서</h2>
+    <h3>첫 HTML 문서</h3>
+    <h4>첫 HTML 문서</h4>
+    <h5>첫 HTML 문서</h5>
+    <h6>첫 HTML 문서</h6>
+    <br>
+    <!-- p 본문 태그 -->
+    <p>hello world!</p>
+    <p>hello <br />world2</p>
+    <!-- br 줄바꿈 태그, html의 컨텐츠는 줄바꿈이 되지 않는다 -->
+    <!-- &nbsp; 공백을 만들어주는 문자 none braking space -->
+    <p>띄어쓰기&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;테스트</p>
+
+    <!-- div 태그는 블록 요소, span은 인라인 요소 -->
+    <div style="background-color: pink;">
+      skyblue span의 부모태그
+      <span style="background-color: skyblue;">pink div의 자식태그</span>
+    </div>
+    <span style="background-color: yellow;">pink div의 형제태그</span>
+  </body>
+</html>
