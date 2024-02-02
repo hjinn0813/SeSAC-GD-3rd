@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML table tag</title>
+  </head>
+  <body>
+    <!-- table만 사용하면 선 없이 만들어진다. tr은 행, td는 칸 -->
+    <table
+      border="1"
+      width="100"
+      height="70"
+      align="center"
+      bgcolor="lightgray"
+      bordercolor="brown"
+    >
+      <!-- 속성이 붉은색으로 보이는 이유는 css에서 스타일링 할 수 있으니 굳이 html에서 하지 말라는 뜻 -->
+      <caption>
+        <h3>테이블 태그</h3>
+      </caption>
+      <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>5</td>
+        <td>6</td>
+      </tr>
+    </table>
+    <hr />
+    <h1>메뉴판</h1>
+    <table border="1" cellspacing="0" cellpadding="10">
+      <tr>
+        <th>메뉴</th>
+        <th>가격</th>
+        <th>비고</th>
+      </tr>
+      <tr>
+        <td>파스타</td>
+        <td>8,900원</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>돈까스</td>
+        <td>9,000원</td>
+        <td>1,000원 추가시 우동 증정</td>
+      </tr>
+      <tr>
+        <td>삼각김밥</td>
+        <td>1,500원</td>
+        <td>참치마요가 맛있음</td>
+      </tr>
+    </table>
+    <table border="1" cellspacing="0" cellpadding="10">
+      <h1>메뉴판 new!</h1>
+      <tr>
+        <th>메뉴</th>
+        <th>가격</th>
+        <th>비고</th>
+        <th>짜잔!</th>
+      </tr>
+      <tr>
+        <td>파스타</td>
+        <td colspan="2">8,900원</td>
+        <!-- 가로 병합으로 2칸을 합쳤다. -->
+        <td rowspan="5">짜자잔!</td>
+      </tr>
+      <tr>
+        <td>돈까스</td>
+        <td>9,000원</td>
+        <td>1,000원 추가시 우동 증정</td>
+      </tr>
+      <tr>
+        <td>삼각김밥</td>
+        <td rowspan="2">1,500원</td>
+        <!-- 세로 병합으로 2칸을 합쳤다. -->
+        <td>참치마요가 맛있음</td>
+      </tr>
+      <tr>
+        <td>줄김밥</td>
+        <td>삼각보다 먹기 쉽다</td>
+      </tr>
+      <tr>
+        <td colspan="3">볶음밥</td>
+      </tr>
+    </table>
+    <br />
+    <table
+      border="1"
+      width="250"
+      height="250"
+      cellspacing="0"
+      cellpadding="20"
+      style="text-align: center"
+    >
+      <tr>
+        <td colspan="2">1</td>
+        <td rowspan="2">2</td>
+      </tr>
+      <tr>
+        <td rowspan="2">3</td>
+        <td>center</td>
+      </tr>
+      <tr>
+        <td colspan="2">4</td>
+      </tr>
+    </table>
+    <br />
+    <table
+      border="1"
+      cellspacing="0"
+      cellpadding="15"
+      style="text-align: center"
+    >
+      <!-- 스타일을 html에서 지정하는건 인라인 스타일 방식 -->
+      <caption>
+        <h1 style="color: green">스타벅스 메뉴 실습</h1>
+      </caption>
+      <tr>
+        <th>구분</th>
+        <th>음료</th>
+        <th>가격</th>
+        <th>이미지</th>
+      </tr>
+      <tr>
+        <td rowspan="2">커피류</td>
+        <td>아메리카노</td>
+        <td>4200원</td>
+        <td>
+          <a
+            href="https://www.starbucks.co.kr/menu/drink_view.do?product_cd=110563"
+            target="_blank"
+          >
+            <img src="/img/drink1.jpg" width="150" alt="아메리카노" />
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>돌체라떼</td>
+        <td>4800원</td>
+        <td>
+          <a
+            href="https://www.starbucks.co.kr/menu/drink_view.do?product_cd=128692"
+            target="_blank"
+          >
+            <img src="/img/drink2.jpg" width="150" alt="돌체라떼" />
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="2">주스류</td>
+        <td>자바칩 프라푸치노</td>
+        <td rowspan="2">5000원</td>
+        <td>
+          <a
+            href="https://www.starbucks.co.kr/menu/drink_view.do?product_cd=168016"
+            target="_blank"
+          >
+            <img src="/img/drink3.jpg" width="150" alt="자바칩 프라푸치노" />
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>녹차 프라푸치노</td>
+        <td>
+          <a
+            href="https://www.starbucks.co.kr/menu/drink_view.do?product_cd=9200000002502"
+            target="_blank"
+          >
+            <img src="/img/drink4.jpg" width="150" alt="녹차 프라푸치노" />
+          </a>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

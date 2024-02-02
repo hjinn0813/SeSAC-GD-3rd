@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML semantic tags</title>
+  </head>
+  <body>
+    <!-- 시멘틱 웹은 의미적으로 컴퓨터가 이해 가능하게 구성한 웹페이지 -->
+    <!-- 웹페이지를 만들때 중첩을 많이 사용하게 되고, 해당 태그의 역할 파악이 힘들 수 있다. -->
+    <!-- 시멘틱 태그를 사용하면 태그의 역할을 파악하기 쉬워서 유지보수도 쉬워진다. -->
+    <!-- 개발자는 시멘틱 태그를 잘 사용한 웹이 유지보수가 쉽고, 컴퓨터도 태그의 역할을 이해하기 쉽다. -->
+    <!-- 시멘틱 태그를 잘 사용한 경우 SEO(검색엔진 최적화)까지 할 수 있다. -->
+    <header style="height: 50px; background-color: pink; text-align: center">
+      head
+      <nav style="height: 20px; background-color: beige">nav</nav>
+    </header>
+    <!-- header는 페이지 최상단에 위치. -->
+    <!-- 내비는 헤더 내부에 위치하거나 aside 내부, aside 대신 사용하기도 한다. -->
+    <main
+      style="
+        height: 1000px;
+        background-color: skyblue;
+        text-align: center;
+        display: flex;
+      "
+    >
+      main
+      <!-- 섹션 안에 아티클을 넣어도 되고, 반대로 작성해도 됨. -->
+      <!-- 그런데 일반적으로는 섹션 안에 아티클이 있는 경우가 많다. -->
+      <!-- 여기서는 섹션이 큰 부분을 묶어주고, 아티클이 주된 내용을 포함하고 있음. -->
+      <section style="width: 80%; background-color: gold; margin: 20px">
+        section
+        <article style="height: 100px; background-color: gray; margin: 10px">
+          article1
+        </article>
+        <article
+          style="height: 100px; background-color: yellowgreen; margin: 10px"
+        >
+          article2
+        </article>
+        <article style="height: 100px; background-color: coral; margin: 10px">
+          article3
+        </article>
+        <article
+          style="height: 100px; background-color: royalblue; margin: 10px"
+        >
+          article4
+        </article>
+      </section>
+      <!-- aside는 옆에 위치하는 공간을 의미. 광고나 메뉴 구성 등 자유롭게 사용 가능. -->
+      <aside style="width: 20%; background-color: violet; margin: 20px">
+        aside
+      </aside>
+    </main>
+    <!-- footer 태그는 최하단에 위치하여 저작권 정보나 법령, 회사정보를 포함한다. -->
+    <footer
+      style="height: 50px; background-color: palegreen; text-align: center"
+    >
+      footer
+    </footer>
+  </body>
+</html>
