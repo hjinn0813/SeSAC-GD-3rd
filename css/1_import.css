@@ -1,0 +1,17 @@
+li {
+  background-color: cornflowerblue;
+}
+body {
+  margin: 5px;
+  padding: 5px;
+}
+a {
+  color: black;
+  text-decoration: none;
+}
+
+/* 0205 practice */
+span {
+  background-color: orange;
+  color: blue;
+}

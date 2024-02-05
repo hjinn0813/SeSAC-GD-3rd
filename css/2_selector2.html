@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>css 복합 선택자</title>
+    <style>
+      header {
+        height: 70px;
+        background-color: aliceblue;
+      }
+      section {
+        /* border는 두께, 스타일, 색상 지정 (순서 상관없음) */
+        border: 5px solid pink;
+      }
+      article {
+        border: 5px solid gold;
+      }
+
+      /* 자식 선택자 */
+      header > h1 {
+        color: violet;
+        text-align: center;
+      }
+
+      /* 선택자의 자식요소 선택 */
+      .first > h2 {
+        background-color: aquamarine;
+      }
+      .second > h2 {
+        color: white;
+        background-color: midnightblue;
+      }
+
+      /* 연쇄적으로 길게 나열 가능, 선택자가 자세할수록 우선순위 더 높다 */
+      main > .first > article > ul > li {
+        font-size: 15px;
+      }
+
+      /* 후손 선택자. 아래에 있는 요소 모두 선택 */
+      .second li {
+        font-size: 20px;
+        background-color: tomato;
+        color: white;
+      }
+
+      /* 복합적으로 섞어서 사용도 가능하다 */
+      main .second article ul > li {
+        color: blue;
+      }
+
+      /* 인접 형제 선택자, 바로 뒤의 형제 1개만 선택 */
+      #sunAndMoon + li {
+        background-color: aqua;
+      }
+
+      /* 일반 형제 선택자, 바로 뒤의 형제 모두를 선택 */
+      #snowWhite ~ li {
+        background-color: bisque;
+      }
+
+      /* li 태그면서 아이디로 showwhite를 사용하는 요소 */
+      /* 태그에 해당 아이디, 클래스 가지고 있는 특정 요소만 선택 */
+      li#snowWhite {
+        background-color: springgreen;
+      }
+      section.second {
+        background-color: yellow;
+      }
+      /* 여러 개의 요소 한번에 스타일링하기 */
+      main section.second ul > li > ul > li,
+      .first article span {
+        border: 5px dotted red;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>복합 선택자 연습</h1>
+    </header>
+    <main>
+      <section class="first">
+        <h2>1st section</h2>
+        <article>
+          <span>전래동화</span>
+          <ul>
+            <li>콩쥐팥쥐</li>
+            <li id="sunAndMoon">햇님달님</li>
+            <li>흥부와 놀부</li>
+            <li>은혜 갚은 까치</li>
+          </ul>
+        </article>
+      </section>
+      <section class="second">
+        <h2>2nd section</h2>
+        <article>
+          <span>외국동화</span>
+          <ul>
+            <li>
+              신데렐라
+              <ul>
+                <li>계모</li>
+                <li>신데렐라</li>
+                <li>왕자</li>
+              </ul>
+            </li>
+            <li>미녀와 야수</li>
+            <li id="snowWhite">백설공주</li>
+            <li>알라딘</li>
+            <li>이상한 나라의 앨리스</li>
+          </ul>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>

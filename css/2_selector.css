@@ -1,0 +1,19 @@
+/* 전체 선택자: html에 존재하는 모든 태그 선택 */
+* {
+  color: rgb(251, 34, 106);
+}
+
+/* 태그 선택자. 문서 내에서 해당 '태그'가 사용된 모든 요소 선택됨 */
+li {
+  background-color: aqua;
+}
+
+/* class 선택자: html에서 class로 분류하여 선택하는 방법. 광활하게 요소 선택 가능 */
+.red {
+  background-color: pink;
+}
+
+/* id 선택자: html에서 해당 아이디를 가진 요소 선택. html 파일 1개당 1번만 사용해야 한다. */
+#orange {
+  background-color: orange;
+}

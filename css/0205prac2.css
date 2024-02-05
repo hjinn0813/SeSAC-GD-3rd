@@ -1,0 +1,17 @@
+* {
+  color: white;
+  background-color: gray;
+}
+/* body 태그의 배경색으로 지정해도 된다. */
+
+span {
+  background-color: red;
+}
+
+#first {
+  background-color: blue;
+}
+
+.second {
+  background-color: green;
+}

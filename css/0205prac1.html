@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>02/05 practice</title>
+    <link rel="stylesheet" href="./1_css_start.css" />
+    <style>
+      h2 {
+        background-color: blue;
+        color: white;
+      }
+      h3 {
+        background-color: black;
+        color: white;
+      }
+
+      /* 가상클래스 연습 */
+      h1:hover {
+        color: red;
+      }
+      a:active {
+        background-color: blue;
+      }
+      input:focus {
+        background-color: orange;
+      }
+
+      .stripes > * {
+        background-color: navy;
+        color: white;
+      }
+      div:nth-child(2n) {
+        background-color: yellow;
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 style="background-color: green; color: white">This is h1</h1>
+    <h2>This is h2</h2>
+    <h3>This is h3</h3>
+    <!-- 내장 방식이 먼저 적용되려면 head에서 style 태그가 아래에 적혀있어야 한다. -->
+    <p>This is paragraph</p>
+    <span>This is span tag (and it's inline element)</span>
+    <hr />
+    <section>
+      <!-- 가상클래스 연습 1 -->
+      <h1>h1 태그입니다</h1>
+      <a href="#">a태그</a>
+      <!-- 링크 주소 넣을 위치에 해시태그 넣으면 새로고침 -->
+      <br />
+      <input type="text" />
+    </section>
+    <hr />
+    <hr />
+    <section>
+      <!-- 가상클래스 연습 2 -->
+      <div class="stripes">
+        <div>navy</div>
+        <div>yellow</div>
+        <div>navy</div>
+        <div>navy</div>
+        <div>navy</div>
+        <div>yellow</div>
+        <div>navy</div>
+        <div>navy</div>
+        <div>navy</div>
+        <div>yellow</div>
+        <div>navy</div>
+      </div>
+    </section>
+  </body>
+</html>

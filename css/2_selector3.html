@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS 선택자 - 가상클래스와 가상요소</title>
+    <style>
+      .div1 {
+        width: 100px;
+        height: 100px;
+        text-align: center;
+        background-color: skyblue;
+      }
+      /* 가상 클래스 선택자: hover, active, visited, focus */
+      .div1:hover {
+        background-color: aqua;
+        height: 150px;
+      }
+      .div1:active {
+        background-color: pink;
+        width: 150px;
+      }
+      input:focus {
+        background-color: cornflowerblue;
+        width: 50px;
+        outline-color: blueviolet;
+      }
+      .links > a {
+        font-size: 25px;
+        font-weight: 900;
+        color: black;
+        background-color: darksalmon;
+      }
+      .links > a:active {
+        color: green;
+      }
+      .links > a:visited {
+        color: royalblue;
+      }
+
+      /* 가상클래스 선택자: first-child, last-child, nth-child(n), not(조건) */
+      .zoo > * {
+        background-color: skyblue;
+        font-size: 20px;
+      }
+      /* 전체 선택자 사용하면 태그 종류에 상관없이 첫번째 요소를 스타일링할 수 있다. */
+      /* not보다 first(last)-child 우선순위가 높기 때문에 먼저 반영된다. */
+      .zoo > *:first-child {
+        background-color: yellow;
+      }
+      .zoo > li:last-child {
+        background-color: blueviolet;
+      }
+      /* .zoo의 자식 중에 li 태그면서 짝수번째 요소를 전부 선택 */
+      .zoo > li:nth-child(2n) {
+        color: white;
+      }
+      .zoo > *:not(div) {
+        background-color: brown;
+      }
+
+      /* 가상요소 선택자 */
+      .div2 {
+        background-color: pink;
+        font-size: 30px;
+        font-weight: 900;
+      }
+      /* 가상요소는 content 속성과 따옴표가 필수로 작성되어야 한다. */
+      /* before 속성은 선택된 요소의 content 앞에 해당 값이 들어감. after는 반대. */
+      .div2::before {
+        content: "(이것은 before 가상요소 선택자입니다)";
+        color: white;
+      }
+      .div2::after {
+        content: "(여기는 after 속성)";
+      }
+      /* 호버를 추가해서 사용할 수도 있다. */
+      .div2:hover::before {
+        content: "메롱!";
+      }
+    </style>
+  </head>
+  <body>
+    <div class="div1">
+      <span>div1</span>
+    </div>
+    <input type="text" />
+    <div class="links">
+      <a href="https://www.naver.com" target="_blank">NAVER</a>
+      <a href="https://www.google.co.kr" target="_blank">GOOGLE</a>
+    </div>
+    <hr />
+    <ul class="zoo">
+      <h1>새싹 동물원</h1>
+      <div>원숭이</div>
+      <li>호랑이</li>
+      <li>사자</li>
+      <li>팬더</li>
+      <li>곰</li>
+      <li>재규어</li>
+      <li>코끼리</li>
+      <li>낙타</li>
+    </ul>
+    <hr />
+    <hr />
+    <div class="div2">가상요소 선택자</div>
+  </body>
+</html>
