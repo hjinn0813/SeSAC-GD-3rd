@@ -78,6 +78,15 @@
       .div2:hover::before {
         content: "메롱!";
       }
+
+      /* 02.07 아이디 선택자의 활용 */
+      .content article {
+        height: 300px;
+        border: 5px solid blue;
+      }
+      #detail {
+        background-color: yellow;
+      }
     </style>
   </head>
   <body>
@@ -103,6 +112,16 @@
     </ul>
     <hr />
     <hr />
-    <div class="div2">가상요소 선택자</div>
+    <!-- 02.07 아이디 선택자의 활용 -->
+    <section>
+      <a href="#detail">상세정보</a>
+      <a href="#review">후기</a>
+      <a href="#comunity">커뮤니티</a>
+    </section>
+    <section class="content">
+      <article id="detail">여기는 상세정보 내용</article>
+      <article id="review">여기는 후기 내용</article>
+      <article id="comunity">여기는 커뮤니티 내용</article>
+    </section>
   </body>
 </html>

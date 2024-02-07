@@ -1,0 +1,183 @@
+.px {
+  width: 100px;
+  height: 100px;
+  background-color: pink;
+}
+
+/* em은 부모 요소의 폰트 사이즈가 기준 */
+/* 부모 요소의 폰트 사이즈를 받아오기 때문에 점점 커짐 */
+.em-text {
+  font-size: 2em;
+}
+/* rem은 루트(html)의 폰트 사이즈가 기준, 중첩되어도 영향이 없다 */
+/* html의 폰트 사이즈를 지정하지 않으면 기본 1rem=16px */
+.rem-text {
+  font-size: 2rem;
+}
+
+/* em, rem은 폰트 크기 속성에만 사용하지 않는다 */
+.em {
+  width: 10em;
+  height: 10em;
+  background-color: aliceblue;
+}
+.em-parents {
+  font-size: 10px;
+  background-color: violet;
+}
+.rem {
+  width: 10rem;
+  height: 10rem;
+  background-color: lightgreen;
+}
+.rem-parents {
+  font-size: 30px;
+  background-color: lightgoldenrodyellow;
+}
+
+/* 퍼센트 요소, 자동으로 너비 변경됨 */
+.per {
+  width: 50%;
+  background-color: palevioletred;
+}
+.per-parents {
+  background-color: mediumspringgreen;
+  width: 300px;
+}
+
+/* 뷰포트 기준 단위 */
+/* 뷰포트 전체를 100으로 봤을때 몇 퍼센트인지 */
+.vh {
+  width: 30vh;
+  height: 30vh;
+  background-color: chocolate;
+}
+.vw {
+  width: 30vw;
+  height: 30vw;
+  background-color: thistle;
+}
+
+.d-block {
+  background-color: lightpink;
+  border: 1px solid yellow;
+  width: 100px;
+  height: 100px;
+  margin: 10px 20px 30px 40px;
+  /* 마진은 더 큰 값이 남는다 */
+  /* 전체 마진이 30인데 위에는 20 아래는 10 들어감 */
+  padding: 30px;
+}
+.d-inline {
+  background-color: lightcyan;
+  border: 1px solid darkblue;
+  /* 인라인 요소는 크기 지정 안 됨 */
+  /* width: 100px; height: 100px; */
+
+  /* 인라인의 마진은 좌우만 가능 */
+  /* 인라인에는 마진, 패딩이 영향을 주지 않아 레이아웃이 깨질 수 있다. */
+  /* padding: 30px; margin: 50px; */
+}
+.d-inline-block {
+  /* 블록 요소처럼 높이와 너비를 지정할 수 있다 */
+  /* 인라인처럼 자신의 크기에 맞게 기본 크기 자동 지정, 수평 정렬 */
+  /* 디스플레이 속성을 변경해서 블록-인라인 서로 변경 가능 */
+  display: inline-block;
+  border: 1px solid salmon;
+  font-size: 20px;
+  width: 200px;
+  height: 200px;
+}
+
+.container {
+  height: 200px;
+  width: auto;
+  background-color: orange;
+}
+.container * {
+  display: inline-block;
+  height: 100px;
+  width: 200px;
+  text-align: center;
+  margin-right: 30px;
+}
+.html {
+  background-color: skyblue;
+}
+.css {
+  background-color: green;
+}
+.js {
+  background-color: red;
+}
+
+/* max-width, min-width (height도 마찬가지) */
+/* min은 ~부터, 늘어날 수 있지만 줄어들 수 없음 */
+/* max는 ~까지, 줄어들 수 있지만 늘어날 수 없음 */
+/* max, min은 반응형 페이지에서 사용하기 때문에 width를 많이 쓴다. */
+.parent {
+  width: 500px;
+  height: 200px;
+  background-color: coral;
+}
+.min {
+  min-width: 400px;
+  height: 100px;
+  background-color: purple;
+}
+.max {
+  max-width: 400px;
+  height: 100px;
+  background-color: bisque;
+}
+
+/* calc 사용하기 */
+.header {
+  height: 130px;
+  background-color: aqua;
+}
+.calc {
+  width: calc(100vw - 300px);
+  height: calc(100vh - 130px);
+  background-color: gold;
+}
+
+/* border, radius */
+.border {
+  border: 3px solid black;
+  /* 단축속성 */
+  /* 굵기(width), 모양(style), 색(color) 따로 지정도 가능 */
+  border-width: 2px;
+  border-style: dotted;
+  border-color: red orange yellow green;
+  border-right: solid 5px purple;
+}
+.rounded {
+  /* border: none; */
+  width: 150px;
+  height: 80px;
+  background-color: gray;
+  border-radius: 40px;
+  border-radius: 5px 10px;
+  border-radius: 20px 0 5px;
+  border-radius: 5px 10px 15px 20px;
+}
+
+/* box-sizing */
+/* 요소의 크기 계산 기준을 지정하는 속성 */
+
+.box-sizing {
+  width: 100px;
+  height: 100px;
+  padding: 20px;
+  border: 15px solid red;
+  background-color: orange;
+}
+.content-box {
+  box-sizing: content-box;
+}
+.border-box {
+  box-sizing: border-box;
+}
+/* border-box는 테두리까지 계산해서 100*100 */
+/* content-box는 컨텐츠 자체의 크기만 계산해서 100*100 */

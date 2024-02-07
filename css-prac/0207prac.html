@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>02.07 practice</title>
+    <style>
+      [disabled] {
+        background-color: red;
+        color: white;
+      }
+      [placeholder="name"] {
+        background-color: orange;
+        color: white;
+      }
+      /* 인풋 태그인데 플레이스홀더 속성이 아닌 것 지정 */
+      input:not([placeholder]) {
+        background-color: blue;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="text" placeholder="name" />
+    <br />
+    <input type="password" value="pw" />
+    <br />
+    <input type="text" value="000-0000-0000" />
+    <br />
+    <input type="text" placeholder="phone" />
+    <br />
+    <input type="text" placeholder="주민번호" disabled />
+  </body>
+</html>

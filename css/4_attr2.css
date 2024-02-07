@@ -1,0 +1,99 @@
+/* 구글 폰트는 link 태그, font-family를 사용해 웹 폰트 적용 */
+.google {
+  font-family: "Gothic A1", sans-serif;
+}
+
+/* 눈누는 font-face, font-family 속성으로 웹 폰트 적용 */
+@font-face {
+  font-family: "seolleimcool-SemiBold";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2312-1@1.1/seolleimcool-SemiBold.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+.noonnu {
+  font-family: "seolleimcool-SemiBold", sans-serif;
+}
+
+/* 모든 폰트의 지정은 전체 선택자 사용 */
+/* * {
+  font-family: "Nanum Pen Script", cursive;
+} */
+
+.sentense {
+  font-weight: 700;
+  /* 글씨체마다 제공되는 값이 다르기 때문에 모든 값이 적용되지 않음 */
+  font-size: 1rem;
+  text-align: center;
+  text-decoration: line-through;
+  line-height: 1;
+  /* line-height는 px로 지정하면 한 줄의 높이가 해당 px로 지정됨 */
+  /* 한 줄이 있을 때, 세로 가운데 정렬이 필요할 때 사용한다 */
+  color: blueviolet;
+}
+
+/* opacity 투명도. 0~1사이의 소수점 숫자 작성 */
+/* 선택된 요소에 존재하는 모든 컨텐츠의 투명도가 한번에 변경된다 */
+/* 배경색 rgba로 투명하게 지정되는 것과 다른 개념 */
+.opacity {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+  color: white;
+}
+.opa20 {
+  opacity: 0.2;
+}
+.opa80 {
+  opacity: 0.8;
+}
+.opa1 {
+  opacity: 1;
+}
+
+/* 요소를 숨기는 방법 */
+.square {
+  width: 100px;
+  height: 100px;
+  border: 1px solid;
+  display: inline-block;
+}
+.d-none {
+  background-color: red;
+  /* display: none; */
+  /* 적응형 페이지에서 사용 */
+}
+.invisible {
+  /* visibility: hidden; */
+  background-color: orangered;
+}
+.opacity-0 {
+  /* opacity: 0; */
+  background-color: tomato;
+}
+
+/* overflow - 컨텐츠가 해당 요소를 넘쳤을 때의 처리방식 지정 */
+/* auto와 scroll의 차이 */
+/* auto는 컨텐츠 크기가 넘치지 않으면 스크롤 안 생김 */
+/* scroll은 컨텐츠가 크기를 넘치지 않아도 스크롤 생김 */
+.text-container {
+  width: 70vw;
+  height: 300px;
+  border: 5px solid black;
+}
+.overflow-hidden {
+  overflow: hidden;
+}
+.overflow-auto {
+  overflow: auto;
+}
+.overflow-scroll {
+  overflow: scroll;
+}
+.overflow-visible {
+  /* overflow: visible; 기본값 */
+  /* x,y축에 따로 지정하는 속성 */
+  /* 단축속성은 x,y 순서로 작성할 수 있다 */
+  overflow-x: hidden;
+  overflow-y: auto;
+}
