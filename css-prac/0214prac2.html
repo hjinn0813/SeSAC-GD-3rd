@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>02.14 position 종합 실습</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        /* 가장자리 테두리 없애서 배경색 채우려고 설정 */
+      }
+      .product-info {
+        background-color: antiquewhite;
+        height: 200px;
+        text-align: center;
+        line-height: 200px;
+      }
+      .product-info-detail {
+        background-color: aliceblue;
+        height: 3000px;
+        /* 스크롤 내리려고 크게 설정 */
+      }
+      .fixed-tab {
+        width: 100%;
+        height: 50px;
+        line-height: 50px;
+        background-color: palevioletred;
+        position: sticky;
+        top: 0;
+        /* 상단에 도착하면 고정되는 기능 */
+      }
+      .top-btn {
+        position: fixed;
+        bottom: 25px;
+        right: 25px;
+        /* 버튼의 위치 지정 */
+
+        background-color: plum;
+        border-radius: 100px;
+        width: 50px;
+        height: 50px;
+        /* 버튼의 크기 지정 */
+
+        text-align: center;
+        line-height: 50px;
+        color: white;
+        font-weight: 700;
+        font-size: 14px;
+      }
+
+      li,
+      a {
+        text-decoration: none;
+        /* 링크 태그에 밑줄을 없애는 방법 */
+        list-style-type: none;
+        /* 리스트에 땡땡이를 없애는 방법 */
+        float: left;
+        /* li 태그를 가로 정렬하는 방법 */
+
+        color: white;
+        font-weight: 600;
+        font-size: 18px;
+      }
+      li {
+        padding: 0px 90px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section class="product-info">section 1</section>
+      <section class="product-info-detail">
+        <div class="fixed-tab">
+          <ul>
+            <li><a href="#">상품정보</a></li>
+            <li><a href="#">혜택/구매정보</a></li>
+            <li><a href="#">고객리뷰/Q&A</a></li>
+            <li><a href="#">추천상품</a></li>
+          </ul>
+        </div>
+      </section>
+    </main>
+    <a href="#" class="top-btn">위로</a>
+  </body>
+</html>

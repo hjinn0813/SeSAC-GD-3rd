@@ -1,0 +1,76 @@
+body {
+  margin: 0;
+  padding: 0;
+  /* position 속성에서는 기본적인 여백도 영향을 주기 때문에 */
+  background: linear-gradient(white, orange);
+  height: 2000px;
+}
+div {
+  /* 아무 것도 없어도 크기 지정해야 보임 */
+  width: 100px;
+  height: 100px;
+  font-weight: 700;
+  text-align: center;
+  line-height: 100px;
+}
+
+/* 기본값이라 position 속성을 작성하지 않아도 된다 */
+/* 인라인 요소라면 왼쪽에서 오른쪽으로 쌓인다 */
+/* 블록 요소는 위에서 아래로 쌓인다 */
+/* top, bottom, right, left 속성은 적용되지 않는다 */
+.static {
+  /* position: static;
+  top: 100px; */
+  background-color: pink;
+}
+
+/* relative는 상대적인 위치. 일반적인 흐름에 따라 배치된다 */
+/* 자기 자리를 벗어나도 원래 자리가 비어있다
+(문서의 원래 흐름을 깨지 않는다) */
+.relative {
+  background-color: lightblue;
+  position: relative;
+  /* left: 100px;
+  top: 50px; */
+  bottom: 30px;
+  right: 10px;
+  /* 내가 원래 있어야하는 위치를 기준으로 움직인다.
+  top,bottom과 left,right는 둘 중에 하나만 작성해야한다 */
+  /* 위, 아래, 오른쪽, 왼쪽으로부터의 여백 */
+}
+
+/* absolute는 절대적인 위치.
+position: static이 아닌 값을 가지는 제일 가까운 조상이 기준점.
+만족하는 기준점이 없으면 viewport를 기준으로 한다.
+특정 요소를 기준 삼아 top, bottom, right, left 속성 지정 필수
+문서의 흐름을 벗어난다 (자기 자리가 사라진다) */
+.absolute {
+  background-color: gold;
+  top: 0;
+  position: absolute;
+}
+
+/* 스크롤을 해도 지정된 위치에 고정되어있는 기능
+viewport 기준으로 특정 위치에 배치된다 (header, top btn 제작시 사용)
+top, bottom, left, right 중 하나 이상 지정 필수
+내 원래 위치 사라지고 문서 흐름이 깨진다 */
+.fixed {
+  background-color: coral;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+}
+
+/* 부모 요소 내부에서만 작동하는 기능 (html 구조 매우 중요!) */
+.sticky {
+  position: sticky;
+  background-color: palegreen;
+  top: 0;
+  /* viewport 최상단에 도달하면 고정된다는 의미 */
+}
+
+.container {
+  height: 1200px;
+  width: 100vw;
+  background: linear-gradient(lightblue, lightpink);
+}

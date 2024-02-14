@@ -1,0 +1,64 @@
+.box {
+  display: inline-block;
+  width: 400px;
+  height: 500px;
+  border: 1px solid blue;
+}
+
+.background {
+  /* 배경색은 background라고 작성해도 적용된다 */
+  /* background는 단축속성 */
+  /* 단축속성 순서는 color, image, repeat, position/size */
+  /* 배경은 단축속성으로 쓰는 경우가 많지는 않다 */
+  background-color: aqua;
+  background: palevioletred;
+
+  /* 그라데이션 기본은 위에서 아래로 */
+  /* 색상 앞에 to bottom, to top, deg 입력시 해당 방향으로 진행 */
+  /* 색상 뒤에 콜론 후 퍼센트 입력하면 해당 색상의 비율 설정 */
+  background: linear-gradient(gold, 80%, yellowgreen);
+}
+
+/* 배경에 이미지 넣기 */
+.background-image {
+  background-image: url("../img/bg_img.png");
+  background-repeat: repeat;
+  /* default 속성 */
+
+  background-repeat: repeat-x;
+  background-repeat: repeat-y;
+  /* x축(가로),y축(세로)만 반복하기 */
+
+  background-repeat: no-repeat;
+  /* 반복 금지 */
+
+  background-position: center;
+  background-position: center top;
+  /* 방향 따로 지정하면 가로, 세로 순서 */
+
+  background-size: auto;
+  /* 원래 이미지 크기 유지하기 */
+
+  background-size: 50px;
+  /* 1개 입력하면 가로 길이 지정되고, 세로는 가로에 맞게 자동 지정 */
+  /* 2개 입력하면 가로, 세로 순서로 지정된다 */
+  /* 가로, 세로를 단위로 지정하면 사진의 원래 비율이 깨질 수 있으니 주의! */
+  background-size: 100px 70px;
+
+  background-size: contain;
+  /* contain은 사진의 짧은 길이에 맞춰 크기 지정 */
+  /* 사진이 짤리지 않기 때문에 자주 사용됨 */
+
+  background-size: cover;
+  /* cover는 사진의 긴 길이에 맞춰 크기 지정 */
+  /* 사진이 짤릴 수 있으니 주의! */
+
+  background-attachment: scroll;
+  /* default 속성 */
+
+  background-attachment: fixed;
+  /* viewport 기준으로 위치 지정 (맨 뒤에 고정되어서 스크롤해도 움직이지 않음) */
+
+  background-position: center;
+  background-size: auto;
+}

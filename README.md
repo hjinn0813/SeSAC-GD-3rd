@@ -1,10 +1,13 @@
 # SeSAC 강동 3기 프론트엔드 입문과정 코드 저장소 👩‍💻
+
 입문부터 심화까지 학습하며 실습한 내용
 
 - 수업 기간: 2023.12.27~2024.05.27
 
 ---
-### Skills I've learned (2024.02)
+
+### skills I've learned (2024.02)
+
 - **Frontend**
 
 ![HTML](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)

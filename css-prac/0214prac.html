@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>02.14 실습</title>
+    <style>
+      .prac1,
+      .prac2,
+      .prac3 {
+        width: 800px;
+        height: 500px;
+        background: skyblue;
+        margin-bottom: 10px;
+        background-image: url(https://item.kakaocdn.net/do/d84248170c2c52303db27306a00fb861f604e7b0e6900f9ac53a43965300eb9a);
+        /* 외부 이미지 링크는 따옴표 없이 입력 */
+      }
+      .prac1 {
+        background-position: center;
+        background-repeat: repeat-x;
+      }
+      .prac2 {
+        background-size: contain;
+        background-position: 100px 30px;
+        background-repeat: no-repeat;
+      }
+      .prac3 {
+        background-size: cover;
+        background-position: top center;
+        background-repeat: no-repeat;
+      }
+
+      /* 검색창 만들기 실습 */
+      input {
+        background-color: lightgray;
+        border: 0px;
+        border-radius: 100px;
+        height: 30px;
+        background-image: url(../img/search-icon.png);
+        background-size: contain;
+        background-size: 22px;
+        background-repeat: no-repeat;
+        background-position: 10px;
+      }
+      [placeholder="검색"] {
+        padding: 0px 40px;
+      }
+      input:focus {
+        background-color: palegreen;
+      }
+
+      /* position 실습 */
+      .container {
+        width: 500px;
+        height: 500px;
+        position: relative;
+        border: 1px solid slateblue;
+      }
+      .item1,
+      .item2,
+      .item3 {
+        width: 100px;
+        height: 100px;
+      }
+      .item1 {
+        background-color: pink;
+        position: relative;
+        left: 50px;
+        top: 30px;
+      }
+      .item2 {
+        background-color: palegreen;
+        position: absolute;
+        right: 30px;
+        bottom: 100px;
+      }
+      .item3 {
+        background-color: palegoldenrod;
+        position: fixed;
+        right: 100px;
+        top: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="prac1">1</div>
+    <br />
+    <div class="prac2">2</div>
+    <br />
+    <div class="prac3">3</div>
+    <br />
+    <hr />
+    <!-- 검색창 만들기 실습 -->
+    <label>
+      <input type="text" placeholder="검색" />
+    </label>
+    <br />
+    <br />
+    <hr />
+    <br />
+    <br />
+    <div class="container">
+      container
+      <div class="item1">item1</div>
+      <div class="item2">item2</div>
+      <div class="item3">item3</div>
+    </div>
+  </body>
+</html>
