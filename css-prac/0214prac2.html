@@ -9,17 +9,29 @@
         margin: 0;
         padding: 0;
         /* 가장자리 테두리 없애서 배경색 채우려고 설정 */
+        height: 3000px;
       }
+
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        /* 리스트 땡땡이 없애는 기능 */
+      }
+      a {
+        color: #000;
+        text-decoration: none;
+      }
+
       .product-info {
+        height: 50vh;
         background-color: antiquewhite;
-        height: 200px;
         text-align: center;
         line-height: 200px;
       }
       .product-info-detail {
         background-color: aliceblue;
-        height: 3000px;
-        /* 스크롤 내리려고 크게 설정 */
+        height: 600px;
       }
       .fixed-tab {
         width: 100%;
@@ -30,6 +42,22 @@
         top: 0;
         /* 상단에 도착하면 고정되는 기능 */
       }
+      .fixed-tab ul {
+        display: flex;
+        justify-content: space-around;
+      }
+
+      .fixed-tab li {
+        height: 100%;
+        margin: 0;
+        text-align: center;
+      }
+      .fixed-tab a {
+        display: block;
+        /* padding: 10px 0; */
+      }
+      /* a 태그는 넓이를 넓게 사용해야 유저가 클릭하기 편리하다 */
+
       .top-btn {
         position: fixed;
         bottom: 25px;
@@ -53,17 +81,14 @@
       a {
         text-decoration: none;
         /* 링크 태그에 밑줄을 없애는 방법 */
-        list-style-type: none;
+        /* list-style-type: none; */
         /* 리스트에 땡땡이를 없애는 방법 */
-        float: left;
+        /* float: left; */
         /* li 태그를 가로 정렬하는 방법 */
 
         color: white;
         font-weight: 600;
         font-size: 18px;
-      }
-      li {
-        padding: 0px 90px;
       }
     </style>
   </head>
