@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS media-query</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      .media {
+        background-color: pink;
+      }
+
+      /* 너비가 800px보다 작으면 적용 */
+      @media screen and (max-width: 800px) {
+        .media {
+          background-color: gold;
+        }
+      }
+
+      /* 너비가 1200px보다 크면 적용 */
+      @media screen and (min-width: 1200px) {
+        .media {
+          background-color: skyblue;
+        }
+      }
+    </style>
+
+    <style>
+      .header-mobile {
+        display: none;
+      }
+      @media screen and (max-width: 720px) {
+        .header-mobile {
+          display: block;
+        }
+        .header-normal {
+          display: none;
+        }
+      }
+
+      .img-container {
+        width: 100vw;
+        display: flex;
+        justify-content: space-around;
+      }
+
+      .img-container img {
+        width: 20vw;
+      }
+
+      @media screen and (max-width: 720px) {
+        .img-container {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .img-container img {
+          width: 80vw;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="media">media-query</div>
+    <hr />
+    <header class="header-normal">웹, 태블릿 헤더</header>
+    <header class="header-mobile">모바일 헤더</header>
+    <hr />
+    <section class="img-container">
+      <img src="../img/pooh.png" alt="pooh" />
+      <img src="../img/pooh.png" alt="pooh" />
+      <img src="../img/pooh.png" alt="pooh" />
+      <img src="../img/pooh.png" alt="pooh" />
+    </section>
+  </body>
+</html>

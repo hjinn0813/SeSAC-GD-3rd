@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS animation</title>
+    <link rel="stylesheet" href="./10_animation.css" />
+
+    <!-- box -->
+    <style>
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: pink;
+        position: relative;
+
+        /* animation 사용 */
+        animation-name: my-ani;
+        animation-duration: 5s;
+        animation-delay: 0.5s;
+        animation-iteration-count: 2;
+        animation-timing-function: linear;
+      }
+
+      @keyframes my-ani {
+        0% {
+          left: 0;
+        }
+        25% {
+          left: 200px;
+        }
+        50% {
+          left: 400px;
+        }
+        75% {
+          left: 200px;
+        }
+        100% {
+          left: 0;
+        }
+      }
+    </style>
+
+    <!-- ball1 -->
+    <style>
+      .bounce-ball1 {
+        width: 100px;
+        height: 100px;
+        position: relative;
+        left: 100px;
+        top: 0;
+        border-radius: 50%;
+        background-color: lightblue;
+
+        /* animation-name: bounce1;
+        animation-duration: 1s;
+        animation-timing-function: ease-in;
+        animation-iteration-count: infinite; */
+
+        /* 단축속성 */
+        /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+        animation: bounce1 1s ease-in infinite;
+        /* animation-direction: alternate
+        애니메이션이 더 자연스럽게 연결될 수 있도록 한다 */
+      }
+
+      @keyframes bounce1 {
+        to {
+          top: 0px;
+        }
+        from {
+          top: 300px;
+        }
+      }
+    </style>
+
+    <!-- ball2 -->
+    <style>
+      .bounce-ball2 {
+        width: 50px;
+        height: 50px;
+        background-color: lightcoral;
+        position: absolute;
+        border-radius: 50%;
+
+        /* animation-name: bounce2;
+        animation-duration: 2s;
+        animation-iteration-count: infinite; */
+        /* 단축속성의 필수 요소 */
+        animation: bounce2 2s infinite;
+      }
+
+      @keyframes bounce2 {
+        from,
+        to {
+          bottom: 0;
+          animation-timing-function: ease-out;
+          /* 0픽셀에서 정상속도로 시작해 천천히 속도 줄이면서 300px이 된다 */
+          width: 60px;
+        }
+
+        50% {
+          width: 100px;
+          bottom: 300px;
+          animation-timing-function: ease-in;
+          /* 300px에서 천천히 시작해 0px로 가면서 정상속도로 끝남 */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+    <div class="bounce-ball1"></div>
+    <div class="bounce-ball2"></div>
+  </body>
+</html>

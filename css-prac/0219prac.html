@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2/19 prac</title>
+
+    <!-- 바다 사진 나열하기 -->
+    <style>
+      img {
+        width: 300px;
+        height: 200px;
+      }
+      .container {
+        width: 100vw;
+        height: 500px;
+        background-color: lightcyan;
+        position: relative;
+      }
+      .sea {
+        position: absolute;
+        transform: skewY(30deg);
+        transition: 1s;
+      }
+      .sea:hover {
+        transform: skew(0);
+      }
+
+      .sea1 {
+        top: 180px;
+        left: 200px;
+        z-index: 3;
+      }
+      .sea2 {
+        top: 150px;
+        left: 350px;
+        z-index: 2;
+      }
+      .sea3 {
+        top: 120px;
+        left: 500px;
+      }
+    </style>
+
+    <!-- transform 함수로 박스 변화시키기 -->
+    <style>
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: skyblue;
+        border: 1px solid black;
+        cursor: pointer;
+        box-sizing: border-box;
+        transition: 1s;
+      }
+      .box1:hover {
+        width: 200px;
+      }
+      .box2:hover {
+        transform: skewX(-45deg) translateX(50%);
+      }
+      .box3:hover {
+        background-color: red;
+        border-radius: 50%;
+        transform: translateX(300px) rotate(180deg);
+      }
+      .box4:hover {
+        background-color: yellow;
+        transform: rotateY(360deg) scale(2) perspective(200px) translateY(25px);
+      }
+    </style>
+
+    <!-- 공 테두리 따라 돌기 -->
+    <style>
+      .content {
+        background-color: antiquewhite;
+        width: 700px;
+        height: 700px;
+      }
+      .ball {
+        width: 100px;
+        height: 100px;
+        background: linear-gradient(45deg, yellow, orange, 70%, red);
+        box-shadow: -5px 5px 10px inset rgb(219, 219, 219, 0.5);
+        /* 배경색 그라데이션, 그림자 적용 */
+
+        border-radius: 50%;
+        position: relative;
+        animation: ball1 10s infinite;
+      }
+      @keyframes ball1 {
+        0% {
+          transform: translate(0px);
+          /* left: 0;
+          top: 0; */
+        }
+        25% {
+          /* transform: translate(calc(100vw - 100px), 0px); */
+          transform: translate(600px, 0px);
+          /* left: 700px;
+          bottom: 700px; */
+        }
+        50% {
+          /* transform: translate(calc(100vw - 100px), calc(100vh - 100px)); */
+          transform: translate(600px, 600px);
+          /* top: 700px;
+          left: 700px; */
+        }
+        75% {
+          /* transform: translate(0px, calc(100vh - 100px)); */
+          transform: translate(0px, 600px);
+          /* top: 700px;
+          left: 0; */
+        }
+        100% {
+          left: 0;
+          top: 0;
+        }
+      }
+    </style>
+
+    <!-- 글자 이동하기 -->
+    <style>
+      h2 {
+        margin-top: 700px;
+      }
+      p {
+        animation: slidein 3s infinite;
+      }
+      @keyframes slidein {
+        from {
+          margin-left: 100%;
+          width: 300%;
+        }
+        to {
+          margin-left: 0;
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="sea sea1"><img src="../img/beach1.jpg" alt="sea1" /></div>
+      <div class="sea sea2"><img src="../img/beach2.jpg" alt="sea2" /></div>
+      <div class="sea sea3"><img src="../img/beach3.jpg" alt="sea3" /></div>
+    </div>
+    <br />
+    <br />
+    <hr />
+
+    <div class="container2">
+      <div class="box box1"></div>
+      <div class="box box2"></div>
+      <div class="box box3"></div>
+      <div class="box box4"></div>
+    </div>
+    <br />
+    <br />
+    <hr />
+    <br />
+
+    <!-- 공, 글자 움직이기 -->
+    <div class="content">
+      <div class="ball"></div>
+    </div>
+    <h2>글자 움직이기</h2>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt officia
+      ut expedita praesentium ratione inventore rerum provident possimus, quam
+      excepturi, quisquam repellat ea nulla beatae officiis dignissimos!
+      Possimus, debitis ex?
+    </p>
+    <br />
+    <br />
+    <br />
+  </body>
+</html>
