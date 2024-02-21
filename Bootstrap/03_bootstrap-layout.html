@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>bootstrap - layout</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      body {
+        height: 3000px;
+        margin-top: 10vh;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- container: 가장 기본적인 레이아웃 요소
+    .container: 반응형 고정 컨테이너, 양 옆에 여백을 자동으로 생성
+    .container-fluid: 유동 컨테이너, 뷰포트 전체 너비 사용 -->
+    <h2 class="text-center">container</h2>
+    <div class="container bg-primary">.container</div>
+    <div class="container-fluid bg-warning">fluid</div>
+    <br />
+    <!-- 브레이크 포인트로 작성한 크기보다 화면 너비가 작아지면 뷰포트 전체 너비 사용 -->
+    <div class="container-sm bg-primary">.container-sm >576</div>
+    <div class="container-md bg-danger">.container-md >768</div>
+    <div class="container-lg bg-info">.container-lg >992</div>
+    <br />
+    <br />
+    <hr />
+    <!-- position: fixed 다른 요소의 위치 무시, margin으로 레이아웃 조정
+      sticky 지정한 위치에 도달했을 때 고정됨 -->
+    <h2>position</h2>
+    <div class="fixed-top bg-success" style="height: 10vh">
+      <!-- 헤더에 높이를 주고, 헤더 높이만큼 바디에 margin-top을 주면 본문 내용에 헤더에 가리지 않음 -->
+      fixed-top
+    </div>
+    <div class="fixed-bottom bg-success">fixed-bottom</div>
+    <div style="height: 1000px; background-color: pink">
+      <div class="sticky-top bg-danger">sticky-top</div>
+    </div>
+  </body>
+</html>
