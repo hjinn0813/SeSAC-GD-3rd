@@ -1,4 +1,4 @@
-console.log("connected");
+console.log('connected');
 
 /* var 키워드
 1. 변수 선언하고 값을 할당
@@ -6,22 +6,22 @@ console.log("connected");
 
 // 1. 변수 선언
 var varName; // undefined 상태
-varName = "layla";
+varName = 'layla';
 // 변수 할당
 
 console.log(varName);
-console.log("varName");
+console.log('varName');
 
 // 변수 재할당
-varName = "Yuki";
+varName = 'Yuki';
 console.log(varName);
 
 // 2. 변수 선언과 값 할당 동시에
-var varName2 = "layla2";
+var varName2 = 'layla2';
 
 // var의 단점
 // 1. 변수를 동일한 이름으로 재선언할 수 있음
-var varName = "lily";
+var varName = 'lily';
 console.log(varName);
 
 // 2. 변수를 선언하기 전에 값을 할당할 수 있다
@@ -35,17 +35,17 @@ console.log(aa);
 
 // 1. 변수 선언
 let letName;
-letName = "홍길동";
+letName = '홍길동';
 console.log(letName);
 
 // 2. 변수 선언과 값 할당 동시에
-let letName2 = "심청이";
+let letName2 = '심청이';
 console.log(letName2);
 
 // let letName2 = "심봉사";
 // 재선언 불가 (에러 발생)
 
-letName2 = "심봉사";
+letName2 = '심봉사';
 console.log(letName2);
 // 재할당은 가능
 
@@ -55,7 +55,7 @@ console.log(letName2);
 변수 재선언 재할당 불가능. 변하지 않는 값을 변수에 저장할 때 사용한다. */
 // const constName; 선언과 동시에 값 할당 필요해서 error 발생
 
-const constName = "layla";
+const constName = 'layla';
 console.log(constName); // layla 출력
 
 /* 정리:
