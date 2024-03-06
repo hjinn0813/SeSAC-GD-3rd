@@ -101,8 +101,9 @@ console.log(pEl);
 
 /* pEl 요소 html에 추가
 append: 선택된 요소의 자식으로 매개변수 요소가 삽입됨
-마지막 자식요소로 추가됨, 여러 자식요소 한번에 삽입 가능
+마지막 자식요소로 추가됨, 여러 자식요소 한번에 삽입 가능, 텍스트 삽입 가능
 createElement로 만든 요소는 여러 번 삽입해도 한 번만 들어간다 */
+// 기본형태: 부모요소.append(자식요소)
 container.append(pEl);
 
 const pEl2 = document.createElement('p');
@@ -123,3 +124,62 @@ for (i = 0; i < 3; i++) {
   // container.append(newDiv);
 }
 console.log(divArr);
+
+// ===================================================================
+// 3월 6일 학습내용
+// append로 텍스트 넣기
+const p1 = document.createElement('p');
+p1.innerHTML = '2024년 3월 6일 추가된 p태그입니다!';
+// p1.innerText = '2024년 3월 6일 추가된 p태그입니다!';
+// p1.append('2024년 3월 6일 추가된 p태그입니다!'); --> 셋 다 같은 의미
+
+container.append(p1, '텍스트 넣기 실험');
+// 텍스트를 바로 넣으면 부모 요소에 들어감
+
+/* appendChild(): 선택된 요소의 자식요소로 매개변수 요소가 추가됨
+가장 뒤의 자식요소로 추가되고, 한 번에 하나의 요소만 추가할 수 있음 */
+const p2 = document.createElement('p');
+p2.innerText = 'appendChild 사용해서 추가한 첫번째 p태그';
+const p3 = document.createElement('p');
+p3.innerText = 'appendChild 사용해서 추가한 두번째 p태그';
+const p4 = document.createElement('p');
+p4.innerText = 'appendChild 사용해서 추가한 세번째 p태그';
+
+// container.appendChild(p3, p4); -> p4는 추가되지 않음
+container.appendChild(p2);
+container.appendChild(p3);
+container.appendChild(p4);
+// container.append(p2, p3, p4); -> 3개 한 번에 넣기
+// container.appendChild('텍스트 넣기 실험2'); -> 텍스트 추가 안 됨
+
+/* prepend(): 선택된 요소의 '가장 첫번째' 자식으로 추가됨
+append와 반대되는 개념 */
+const div2 = document.createElement('div');
+div2.classList.add('prepend');
+div2.innerText = 'prepend로 추가한 첫번째 요소';
+container.prepend(div2);
+
+const div3 = document.createElement('div');
+div3.classList.add('prepend');
+div3.innerText = 'prepend로 추가한 두번째 요소';
+container.prepend(div3);
+
+// before, after
+// before: 선택된 요소의 앞에 추가됨
+const h1 = document.querySelector('#h1');
+const h3 = document.createElement('h3');
+h3.innerText = 'before로 추가한 h3';
+h1.before(h3);
+
+// after: 선택된 요소의 뒤에 추가됨
+const h2 = document.createElement('h2');
+h2.innerText = 'after로 추가한 h2';
+h1.after(h2);
+
+// 요소 삭제
+const deleteDiv = document.querySelector('.container div');
+deleteDiv.remove(); // 선택한 요소 삭제
+
+// #flower의 두번째 li인 '장미' 삭제하기 (nth-child)
+const rose = document.querySelector('#flower li:nth-child(2)');
+rose.remove();
