@@ -193,8 +193,8 @@ console.log(cc5); // undefined
 // ccc3은 default가 사용되지 않고 배열의 2번 인덱스 받아와서 출력
 const [ccc1, ccc2, ccc3 = 'ccc3 default', ccc4, ccc5 = 'maybe undefined'] =
   colors;
-console.log(ccc3);
-console.log(ccc5);
+console.log(ccc3); // yellow
+console.log(ccc5); // maybe undefined
 
 // --------------------------------------------------------------------------------------------
 // 2-1-1. 배열을 사용해 변수 교환
@@ -269,16 +269,16 @@ console.log(obj); // key1, key5 제외한 나머지 key-value 쌍이 전부 저�
 // 함수에서 전개연산자, 구조분해할당, default 지정
 function test(...val) {
   /* ...val의 의미는 인자의 개수를 제한하지 않고 모두 받겠다는 의미
-  모든 인자는 배열로 val이라는 별명을 사용해 접근할 수 있다
-  v4 변수에 할당할 값이 없을 경우,
-  즉 인자가 3개 이하로 들어온 경우 '없음'이라는 default 값이 v4 변수에 저장된다 */
+  모든 인자는 배열로 val이라는 별명을 사용해 접근할 수 있다 */
 
   const [v1, v2, v3, v4 = '없음', ...rest] = val;
   console.log(v1);
   console.log(v2);
   console.log(v3);
-  console.log(v4);
+  console.log(v4); // 없음
   console.log(rest); // 5번째 인자부터 rest 배열에 저장됨
+  /* v4 변수에 할당할 값이 없을 경우,
+  즉 인자가 3개 이하로 들어온 경우 '없음'이라는 default 값이 v4 변수에 저장된다 */
 }
 test(1, 2, 3, 4, 5, 6, 7, 8);
 test(1, 2, 3);
@@ -299,7 +299,10 @@ console.log(addNum(1, 2, 3, 4, 5, 6)); // 21
 // 매개변수에 기본값 설정하기
 function introduce(name, like = 'money', hate, gender = '여') {
   console.log(
-    `안녕하세요, 제 이름은 ${name}이고, 저는 ${like}를 좋아합니다. 하지만 ${hate}를 싫어해요. 저는 ${gender}성입니다.`
+    `안녕하세요, 제 이름은 ${name}이고, 
+    저는 ${like}를 좋아합니다. 
+    하지만 ${hate}를 싫어해요. 
+    저는 ${gender}성입니다.`
   );
 }
 introduce(); // 그냥 부르면 (설정한) 기본값이 들어감
