@@ -74,7 +74,7 @@ export default function FunctionComponent() {
         Hello!
       </div>
       <div style={textStyle}>
-        위에서 함수 지정했기 때문에 중괄호 두 번 묶을 필요없음
+        위에서 객체 지정했기 때문에 중괄호 두 번 묶을 필요없음
       </div>
 
       {/* 4. class, onclick을 JSX에서 사용하기 */}
