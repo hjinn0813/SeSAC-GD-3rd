@@ -1,4 +1,4 @@
-export default function ProductList({ prodData }) {
+export default function ProductItem({ prodData }) {
   return (
     <div className="prod-container" key={prodData.id}>
       <div>제품명: {prodData.name}</div>

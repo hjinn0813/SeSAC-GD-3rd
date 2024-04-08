@@ -1,7 +1,8 @@
 import FuncProps from './components/FuncProps';
 import ClassProps from './components/ClassProps';
 import './App.css';
-import ProductList from './components/ProductList';
+import ProductItem from './components/ProductItem';
+import productContainer from './components/ProductContainer';
 
 function App() {
   const sayHi = () => {
@@ -114,9 +115,13 @@ function App() {
       {/* payment가 없다고 error */}
       <ClassProps drink="레몬에이드" />
 
-      {products.map((prod) => (
-        <ProductList prodData={prod} />
-      ))}
+      {/* map 메소드로 순회하면서 찍어줌 */}
+      {/* {products.map((prod) => (
+        <ProductItem prodData={prod} key={prod.id} />
+      ))} */}
+
+      {/* map 메소드 어려운 버전 */}
+      <productContainer products={products} />
     </div>
   );
 }
