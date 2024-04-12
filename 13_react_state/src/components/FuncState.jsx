@@ -42,6 +42,7 @@ export default function FuncState() {
 //       <button onClick={() => setApple('apple')}>영어로 변경!</button>
 //       <div>{apple}</div>
 //       <hr />
+
 //       <h2>Number state를 1씩 증가시키는 버튼 만들기</h2>
 //       <div>{number}</div>
 //       <button
