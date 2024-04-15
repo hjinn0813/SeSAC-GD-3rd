@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 
 export default function RefPrac1() {
   // 현재 입력되어있는 유저 데이터 (서버에서 받아왔다는 전제)
@@ -16,6 +16,10 @@ export default function RefPrac1() {
   const [inputEmail, setInputEmail] = useState('');
   const [nextId, setNextId] = useState(data.length + 1); // useState(3)
 
+  // input focus를 위한 ref 생성
+  const userInputRef = useRef();
+  const emailInputRef = useRef();
+
   // 사용자의 정보를 받는 input에 변경사항이 있을 때 실행되는 함수
   // onChange로 연결되어 있으며 해당 함수가 실행될 때
   // 이벤트가 발생한 input의 value를 inputUser, inputEmail state의 값으로 업데이트
@@ -24,10 +28,31 @@ export default function RefPrac1() {
   const onChangeUser = (e) => setInputUser(e.target.value);
   const onChangeEmail = (e) => setInputEmail(e.target.value);
 
+  // 유효성검사 validation
+  const validation = () => {
+    // 두 가지 조건을 무조건 전부 확인해야할때 if문 2개 작성 가능
+    if (inputUser.trim().length === 0) {
+      userInputRef.current.focus();
+      return false;
+    }
+    if (inputEmail.trim().length === 0) {
+      emailInputRef.current.focus();
+      return false;
+    }
+
+    return true;
+    // 빈칸이 모두 입력되었을 때
+  };
+
   // eventClick():
   // 1. 이메일 input의 onKeyDown 속성에 연결하여 엔터키 누르면 정보 보여짐
   // 2. 새로운 유저의 정보가 브라우저에 보여질 수 있게 '등록' 버튼에 연결
   const eventClick = () => {
+    if (!validation) {
+      return;
+      // validation 함수가 false면 아래 정보출력 코드 작동 안함
+    }
+
     // 새로운 데이터를 기존 데이터 배열에 추가
     // 참고) concat(): https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/concat
     // const nextData = data.concat({
@@ -100,6 +125,7 @@ export default function RefPrac1() {
         placeholder="이름"
         value={inputUser}
         onChange={onChangeUser}
+        ref={userInputRef}
       />
 
       <input
@@ -109,6 +135,7 @@ export default function RefPrac1() {
         value={inputEmail}
         onChange={onChangeEmail}
         onKeyDown={onKeyDownEnter}
+        ref={emailInputRef}
       />
 
       <button onClick={eventClick}>등록</button>
