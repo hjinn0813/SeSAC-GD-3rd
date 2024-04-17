@@ -4,6 +4,10 @@ export default function UseCallback() {
   const [number, setNumber] = useState(0);
   const [isTrue, setIsTrue] = useState(true);
 
+  /* 일반적으로 선언된 함수의 경우 컴포넌트가 리렌더링 될 때마다 함수가 재선언됨
+  -> 그러므로 isTrue state의 변경이 있어도 func1 함수는 재선언됨
+  -> useEffect에서 의존성배열로 func1에 변경이 생기면 
+  내부 로직 실행하도록 작성시 매번 useEffect 의 콜백함수가 실행됨 */
   const func1 = () => {
     console.log(`number state: ${number}`);
   };
@@ -14,10 +18,6 @@ export default function UseCallback() {
     console.log(`number state: ${number}`);
   }, [number]);
 
-  /* 일반적으로 선언된 함수의 경우 컴포넌트가 리렌더링 될 때마다 함수가 재선언됨
-  -> 그러므로 isTrue state의 변경이 있어도 func1 함수는 재선언됨
-  -> useEffect에서 의존성배열로 func1에 변경이 생기면 
-  내부 로직 실행하도록 작성시 매번 useEffect 의 콜백함수가 실행됨 */
   useEffect(() => {
     console.log('func1 함수 변경');
   }, [func1]);

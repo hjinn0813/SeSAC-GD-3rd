@@ -1,7 +1,7 @@
 import { Component } from 'react';
 
 class MyComponent extends Component {
-  // 컴포넌트 마운트 되었을 떄
+  // 컴포넌트 마운트 되었을 때
   componentDidMount() {
     console.log('클래스형 컴포넌트에서 mount!');
   }
