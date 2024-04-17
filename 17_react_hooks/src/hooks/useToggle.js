@@ -9,5 +9,6 @@ export default function UseToggle(initialValue = false) {
 
   const toggleValue = () => setValue(!value);
 
+  // return 값은 state인 value와 state를 반전시키는 toggleValue 함수
   return [value, toggleValue];
 }
