@@ -23,9 +23,9 @@ export default function Sass() {
       </button>
       <hr />
       <div className="sass-for-container">
-        <div className="box1"></div>
-        <div className="box1"></div>
-        <div className="box1"></div>
+        <div className="box1">1</div>
+        <div className="box1">2</div>
+        <div className="box1">3</div>
       </div>
       <div className="sass-use-if">@if문 사용</div>
     </>

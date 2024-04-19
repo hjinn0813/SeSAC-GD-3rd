@@ -35,8 +35,11 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/products" element={<ProductPage />} />
+
         {/* <Route path="/products/1" element={<ProductDetail />} /> */}
         <Route path="/products/:productId" element={<ProductDetail />} />
+        {/* 파라미터 처리 */}
+
         <Route path="/photos" element={<PhotoPage />} />
         <Route path="*" element={<NotFound />} />
       </Routes>

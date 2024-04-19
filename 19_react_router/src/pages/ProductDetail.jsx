@@ -18,7 +18,7 @@ export default function ProductDetail() {
 
   const navigate = useNavigate();
   const params = useParams();
-  console.log(params);
+  console.log(params.productId); // 1
 
   const { productId } = useParams();
 
@@ -34,7 +34,7 @@ export default function ProductDetail() {
     (prod) => prod.id === Number(productId)
   );
 
-  console.log(result);
+  console.log(result); // 객체의 배열에서 index 하나 뽑아서 출력
 
   if (!result) {
     return (

@@ -95,7 +95,7 @@ $mobile: 700px;
 }
 
 // ==================================================================================
-// 5. 확장
+// 5. 확장과 상속
 .sass-btn {
   border: 1px solid black;
   border-radius: 5px;
@@ -119,12 +119,12 @@ $mobile: 700px;
   //   height: 100px;
   // }
   // div:nth-child(2) {
-  //   background-color: blue;
+  //   background-color: skyblue;
   //   width: 120px;
   //   height: 100px;
   // }
   // div:nth-child(3) {
-  //   background-color: black;
+  //   background-color: yellowgreen;
   //   width: 140px;
   //   height: 100px;
   // }
@@ -134,6 +134,7 @@ $mobile: 700px;
   // #{}를 사용해 코드의 어디에서든 변수값 $i를 사용할 수 있음
   // 문자 사이에 변수를 작성하거나 연산이 아닌 것에 값을 넣을 때
   // to: 1~2, through: 1~3까지 연속
+
   @for $i from 1 through 3 {
     div:nth-child(#{$i}) {
       background-color: pink;
