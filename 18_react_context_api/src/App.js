@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { ThemeContext } from './contexts/ThemeContext';
+import Box from './components/Box';
 import AgeProvider from './components/provider/AgeProvider';
 import UserProvider from './components/provider/UserProvider';
-import Box from './components/Box';
 import Profile from './components/Profile';
 
 function App() {

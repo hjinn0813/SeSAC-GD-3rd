@@ -1,0 +1,157 @@
+.sass-box {
+  width: 100px;
+  height: 100px;
+  background-color: palevioletred;
+}
+
+// 1. 변수 사용하기
+// 디자인 시스템 (색상, 글자크기, 여백 등) 변수에 저장해 사용
+$color-main: #6cd1fd;
+$boxShadow: 2px 2px 6px gray;
+$mobile: 700px;
+
+.sass-var {
+  background-color: $color-main;
+  box-shadow: $boxShadow;
+}
+.sass-var2 {
+  color: $color-main;
+}
+
+@media screen and (max-width: $mobile) {
+  .sass-var2 {
+    background-color: black;
+  }
+}
+
+// ==================================================================================
+// 2. 연산하기
+.sass-calc {
+  // 단위가 같으면 자동 계산, 단위 다르면 calc 사용
+  width: 500px - 80px;
+  height: calc(50vh - 180px);
+  border: 5px solid yellow;
+}
+
+// ==================================================================================
+// 3. 중첩하기
+// .sass-div1 > .sass-div2 > .sass-div3
+.sass-div1 {
+  border: 5px solid pink;
+  padding: 50px;
+
+  .sass-div2 {
+    border: 5px solid skyblue;
+    padding: 10px;
+
+    .sass-div3 {
+      background-color: burlywood;
+      width: 50px;
+      height: 50px;
+    }
+  }
+
+  &:hover {
+    border: 5px solid red;
+  }
+}
+
+// ==================================================================================
+// 4. mixin - scss 에서 사용하는 함수
+@mixin bold-border() {
+  border: 10px solid black;
+}
+
+// 매개변수를 받아 재사용성 높이는 방법
+@mixin add-border($borderWidth, $bordercolor) {
+  border: $borderWidth $bordercolor solid;
+}
+
+// 매개변수에 기본값 설정
+@mixin add-border2($borderWidth: 5px, $bordercolor: yellow) {
+  border: $borderWidth $bordercolor solid;
+}
+
+// 자주 사용하는걸 이렇게 담아서 include로 사용하면 훨씬 편리해짐
+@mixin default-flex() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sass-mixin {
+  width: 100px;
+  height: 100px;
+  background-color: aliceblue;
+  // border: 10px solid black;
+  // @include bold-border();
+
+  @include add-border(8px, green);
+
+  // @include add-border2(15px);
+
+  // 협업 시에는 해당 mixin이 어떤 스타일링인지 작성해주는 것이 좋음
+  @include add-border2($bordercolor: yellow, $borderWidth: 15px);
+}
+
+// ==================================================================================
+// 5. 확장
+.sass-btn {
+  border: 1px solid black;
+  border-radius: 5px;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.sass-btn-extends {
+  @extend .sass-btn;
+  background-color: tomato;
+}
+
+.sass-for-container {
+  border: 1px solid black;
+  height: 100px;
+
+  // 1. nth-child 사용해 요소 스타일링
+  // div:nth-child(1) {
+  //   background-color: pink;
+  //   width: 100px;
+  //   height: 100px;
+  // }
+  // div:nth-child(2) {
+  //   background-color: blue;
+  //   width: 120px;
+  //   height: 100px;
+  // }
+  // div:nth-child(3) {
+  //   background-color: black;
+  //   width: 140px;
+  //   height: 100px;
+  // }
+
+  // 2. @for 사용
+  // #{}: 문자 보간 interpolation
+  // #{}를 사용해 코드의 어디에서든 변수값 $i를 사용할 수 있음
+  // 문자 사이에 변수를 작성하거나 연산이 아닌 것에 값을 넣을 때
+  // to: 1~2, through: 1~3까지 연속
+  @for $i from 1 through 3 {
+    div:nth-child(#{$i}) {
+      background-color: pink;
+      height: 100px;
+      width: (80px + 20px * $i);
+    }
+  }
+}
+
+@mixin useIf($bgcolor: #fff) {
+  background-color: $bgcolor;
+
+  @if ($bgcolor == #000) {
+    color: #fff;
+  } @else {
+    color: #000;
+  }
+}
+.sass-use-if {
+  @include useIf($bgcolor: #000);
+}

@@ -1,0 +1,25 @@
+div {
+  border: 1px solid black;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: cornflowerblue;
+}
+
+.container {
+  background-color: aliceblue;
+}
+
+.item {
+  color: rebeccapurple;
+
+  /* text도 display로 가운데 정렬 가능 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.item1 {
+  font-weight: bold;
+}
