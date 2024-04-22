@@ -28,6 +28,11 @@ export default function Sass() {
         <div className="box1">3</div>
       </div>
       <div className="sass-use-if">@if문 사용</div>
+
+      {/* 4월 22일 학습내용 */}
+      <hr />
+      <div className="sass-util">utils import</div>
+      <div className="sass-util-btn">utils btn</div>
     </>
   );
 }

@@ -14,7 +14,7 @@ function App() {
         <li>일반 CSS 파일 만들어 import</li>
         <li></li>
       </ol>
-      <StyledComp />
+      {/* <StyledComp /> */}
       <Sass />
     </div>
   );

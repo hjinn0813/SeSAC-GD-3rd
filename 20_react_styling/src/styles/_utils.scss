@@ -1,0 +1,35 @@
+// 4월 22일 학습내용
+// 기본설정을 여기에 저장하면 페이지에 통일감을 줄 수 있다
+
+// color 변수
+$color-main-util: rgb(248, 122, 143);
+$color-main-light: rgb(255, 215, 215);
+$color-gray: #8d8d8d;
+$color-light-gray: #d2d2d2;
+$color-dark-gray: #454545;
+
+// breakpoint 설정
+$break-point-mobile: 720px;
+/* @media screen and (max-width: $break-point-mobile){
+  // 미디어쿼리 스타일링 작성  
+} */
+
+// mixin
+@mixin btn($bgcolor) {
+  padding: 10px;
+  border: 1px solid black;
+  display: inline-block;
+  box-sizing: border-box;
+
+  background-color: $bgcolor;
+  @if $bgcolor==$color-main-util {
+    border: 1px solid $color-main-light;
+    color: #fff;
+  } @else if $bgcolor==$color-main-light {
+    border: 1px solid $color-main-util;
+  } @else if $bgcolor==$color-light-gray {
+    border: 1px solid $color-gray;
+  } @else {
+    border: 1px solid #000;
+  }
+}

@@ -1,3 +1,15 @@
+// 4월 22일 학습내용
+@import 'utils';
+
+// import utils
+.sass-util {
+  background-color: $color-main-util;
+}
+.sass-util-btn {
+  @include btn($bgcolor: $color-main-util);
+}
+
+// 4월 19일 학습내용
 .sass-box {
   width: 100px;
   height: 100px;
