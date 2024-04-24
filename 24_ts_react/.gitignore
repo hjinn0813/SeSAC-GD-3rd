@@ -1,8 +1,5 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
-# 오류 해결하면 제외하기
-components/UseState.tsx
-
 # dependencies
 /node_modules
 /.pnp
