@@ -29,5 +29,28 @@ let arr2: Array<number | string> = [1, 2, 3, '가', '나', '다'];
 let arr3: (boolean | null | number[])[] = [true, null, false, [4, 22]];
 let arr4: Array<boolean | null | number[]> = [true, null, false, [4, 22]];
 
-// 어떤 자료형이든 상관없이 들어갈 수 있는 배열
+// 어떤 자료형이든 상관없이 들어갈 수 있는 배열 (any 사용 지양)
 let arrAny: any[] = [8, 3, true, 'a', 'b', null];
+
+// ============================================================================
+/* 4월 24일 학습내용 */
+// object
+let obj1: object = {
+  name: 'layla',
+  gender: 'female',
+};
+
+// 타입 추론 (암묵적으로 타입 지정됨)
+let aa = 424;
+let bb = 'hello';
+let cc = true;
+let dd = null;
+let ee;
+
+// aa = '5' -> ERROR: Type 'string' is not assignable to type 'number'
+ee = 5;
+ee = 'hello';
+/*
+  타입 지정 없이 선언만 한 변수는 any 타입으로 자동 지정됨
+  any 타입을 사용하면 TS을 쓰는 의미가 없음
+*/
