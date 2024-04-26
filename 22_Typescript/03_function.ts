@@ -1,4 +1,4 @@
-// return 값이 없는 함수
+// void: return 값이 없는 함수
 // return값 있는 경우 void 선언 불가
 function consoleStr(str: string): void {
   console.log(str);

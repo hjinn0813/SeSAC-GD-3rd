@@ -1,5 +1,5 @@
 import PropsTypes from './components/PropsTypes';
-import UseState from './components/UseState';
+import UseStateCompo from './components/UseStateCompo';
 import UseRef from './components/UseRef';
 import EventObj from './components/EventObj';
 
@@ -9,7 +9,7 @@ function App() {
       <PropsTypes name="layla" age={20} />
       <PropsTypes name="layla" />
       <hr />
-      <UseState />
+      <UseStateCompo />
       <UseRef />
       <EventObj />
     </div>

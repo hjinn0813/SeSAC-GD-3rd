@@ -8,7 +8,7 @@ import { dataTypes } from '../types/todoData';
 //   done: boolean;
 // }
 
-export default function useState() {
+export default function UseStateCompo() {
   // count state 만들기 - 기본값 0
   const [count, setCount] = useState<number>(0);
 
