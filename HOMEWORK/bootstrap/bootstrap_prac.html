@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>bootstrap practice</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      body {
+        background-color: rgb(124, 124, 124);
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- header -->
+    <header>
+      <nav
+        class="navbar fixed-top navbar-expand-lg"
+        style="background-color: rgb(216, 216, 216); height: 70px"
+      >
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#" style="font-weight: 700">한양극장</a>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">영화</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">극장</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">예매</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">스토어</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">이벤트</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">혜택</a>
+              </li>
+            </ul>
+
+            <form class="d-flex" role="search" style="margin-right: 20px">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="검색"
+                aria-label="Search"
+              />
+              <button class="btn btn-light" type="submit" style="width: 80px">
+                검색
+              </button>
+            </form>
+
+            <div class="text-end">
+              <button type="button" class="btn btn-dark me-2">로그인</button>
+              <button type="button" class="btn btn-warning">가입</button>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- carousel -->
+    <section>
+      <div
+        id="carouselExampleAutoplaying carouselExampleCaptions"
+        class="carousel slide"
+        data-bs-ride="carousel"
+        data-bs-interval="3000"
+      >
+        <!-- buttons to next -->
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+        </div>
+
+        <!-- carousel photos -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              src="./img/us-and-them.jfif"
+              class="d-block w-100"
+              alt="Us-and-them"
+            />
+            <div class="carousel-caption d-none d-md-block">
+              <h4 style="font-weight: 700">먼 훗날 우리 (Us and Them)</h4>
+              <p>
+                고향 가는 기차에서 만난 두 청춘.
+                <br />
+                낯선 도시 베이징으로 돌아와 서로에게 의지한다.
+                <br />
+                10년 뒤, 다시 찾아온 우연.
+                <br />
+                그리운 사랑이 부르면, 이번엔 함께 뒤돌아볼까.
+              </p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img
+              src="./img/lady-bird.jfif"
+              class="d-block w-100"
+              alt="lady-bird"
+            />
+            <div class="carousel-caption d-none d-md-block">
+              <h3 style="font-weight: 700">레이디 버드 (Lady Bird)</h3>
+              <p>
+                안녕, 내 이름은 "레이디 버드"라고 해.
+                <br />
+                모두가 나에게 잘 살아보라고 충고로 위장한 잔소리를 해.
+                <br />
+                하지만 지금 이 모습이 내 최고의 모습이라면?
+                <br />
+                날 좀 그냥 내버려 둬!
+              </p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img
+              src="./img/neko.jfif"
+              class="d-block w-100"
+              alt="세상에서 고양이가 사라진다면"
+            />
+            <div class="carousel-caption d-none d-md-block">
+              <h3 style="font-weight: 700">
+                세상에서 고양이가 사라진다면 (世界から猫が消えたなら)
+              </h3>
+              <p>
+                병원에서 시한부 판정을 받은 날, 나를 찾아온 ‘의문의 존재’.
+                <br />
+                어머니와의 추억이 담긴 고양이를 세상에서 없애겠다고 합니다.
+                <br />
+                세상에서 고양이가 사라진다면 나의 인생은 어떻게 변할까요?
+                <br />
+                세상에서 내가 사라진다면 누가 슬퍼해줄까요?
+              </p>
+            </div>
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- movie cards -->
+    <section>
+      <h2 style="margin: 100px 95px 30px; color: white; font-weight: 700">
+        무비차트
+      </h2>
+      <!-- 카드 리스트 추가 -->
+      <div
+        class="d-flex"
+        style="justify-content: space-evenly; margin: 30px 0px"
+      >
+        <div class="card" style="width: 20rem">
+          <img src="./img/p1.jfif" class="card-img-top" alt="서울의 봄" />
+          <div class="card-body">
+            <h3 class="card-title" style="font-weight: 700">
+              서울의 봄
+              <span class="badge text-bg-danger">Hot</span>
+            </h3>
+            <p class="card-text" style="font-size: 18px">
+              1979년 12월 12일, 수도 서울 군사반란 발생 그날, 대한민국의 운명이
+              바뀌었다! 실화를 바탕으로 한 영화.
+            </p>
+            <a href="#" class="btn btn-secondary" style="font-size: 18px"
+              >예매하기</a
+            >
+          </div>
+        </div>
+
+        <div class="card" style="width: 20rem">
+          <img
+            src="./img/p2.jfif"
+            class="card-img-top"
+            alt="콘크리트 유토피아"
+          />
+          <div class="card-body">
+            <h3 class="card-title" style="font-weight: 700">
+              콘크리트 유토피아
+            </h3>
+            <p class="card-text" style="font-size: 18px">
+              “아파트는 주민의 것!”
+              <br />
+              살아남은 자들의 생존규칙, 따르거나 떠나거나.
+            </p>
+            <a href="#" class="btn btn-secondary" style="font-size: 18px"
+              >예매하기</a
+            >
+          </div>
+        </div>
+
+        <div class="card" style="width: 20rem">
+          <img src="./img/p3.jfif" class="card-img-top" alt="다음 소희" />
+          <div class="card-body">
+            <h3 class="card-title" style="font-weight: 700">다음 소희</h3>
+            <p class="card-text" style="font-size: 18px">
+              우리는 모두 그 아이를 만난 적이 있다. 실화를 바탕으로 한 영화.
+            </p>
+            <a href="#" class="btn btn-secondary" style="font-size: 18px"
+              >예매하기</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div
+        class="d-flex"
+        style="justify-content: space-evenly; margin: 70px 0px"
+      >
+        <!-- 카드 리스트 추가 -->
+        <div class="card" style="width: 20rem">
+          <img src="./img/p4.jfif" class="card-img-top" alt="에에올" />
+          <div class="card-body">
+            <h3 class="card-title" style="font-weight: 700">
+              에브리씽 에브리웨어 올 앳 원스
+            </h3>
+            <p class="card-text" style="font-size: 18px">
+              그 어떤 인생을 살아도 나는 너를 구할거야.
+            </p>
+            <a href="#" class="btn btn-secondary" style="font-size: 18px"
+              >예매하기</a
+            >
+          </div>
+        </div>
+
+        <div class="card" style="width: 20rem">
+          <img src="./img/p5.jfif" class="card-img-top" alt="엘리멘탈" />
+          <div class="card-body">
+            <h3 class="card-title" style="font-weight: 700">엘리멘탈</h3>
+            <p class="card-text" style="font-size: 18px">
+              '엘리멘트 시티'에 사는 4개 원소들의 이야기. 세상은 반대에 끌린다!
+            </p>
+            <a href="#" class="btn btn-secondary" style="font-size: 18px"
+              >예매하기</a
+            >
+          </div>
+        </div>
+
+        <div class="card" style="width: 20rem">
+          <img src="./img/p6.jfif" class="card-img-top" alt="헤어질 결심" />
+          <div class="card-body">
+            <h3 class="card-title" style="font-weight: 700">헤어질 결심</h3>
+            <p class="card-text" style="font-size: 18px">
+              짙어지는 의심, 깊어지는 관심.
+              <br />
+              2022년 제75회 칸 영화제 감독상 수상작.
+            </p>
+            <a href="#" class="btn btn-secondary" style="font-size: 18px"
+              >예매하기</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- event cards -->
+    <section style="margin-bottom: 100px">
+      <h2 style="margin: 180px 100px 20px; color: white; font-weight: 700">
+        EVENT
+      </h2>
+      <div id="carouselExampleIndicators" class="carousel slide">
+        <div class="carousel-indicators" style="margin-bottom: -10px">
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+        </div>
+
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div
+              class="d-flex"
+              style="justify-content: space-evenly; margin: 30px 0px"
+            >
+              <div class="card" style="width: 20rem">
+                <img src="./img/e1.jpg" class="card-img-top" alt="event1" />
+                <div class="card-body">
+                  <p class="card-text">
+                    [ULTRA 4DX] MOMENT 브랜드 리뉴얼 기념축제
+                  </p>
+                </div>
+              </div>
+
+              <div class="card" style="width: 20rem">
+                <img src="./img/e2.jpg" class="card-img-top" alt="event2" />
+                <div class="card-body">
+                  <p class="card-text">
+                    [2024 아카데미 기획전] 주요 화제작을 한 곳에
+                  </p>
+                </div>
+              </div>
+
+              <div class="card" style="width: 20rem">
+                <img src="./img/e3.jpg" class="card-img-top" alt="event3" />
+                <div class="card-body">
+                  <p class="card-text">[월레스와 그로밋] 공식굿즈 한정 판매</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div
+              class="d-flex"
+              style="justify-content: space-evenly; margin: 30px 0px"
+            >
+              <div class="card" style="width: 20rem">
+                <img src="./img/e4.jpg" class="card-img-top" alt="event4" />
+                <div class="card-body">
+                  <p class="card-text">VIP 고객을 위한 예매 오픈 알림 서비스</p>
+                </div>
+              </div>
+
+              <div class="card" style="width: 20rem">
+                <img src="./img/e5.jpg" class="card-img-top" alt="event5" />
+                <div class="card-body">
+                  <p class="card-text">SVIP 예매 혜택 서비스</p>
+                </div>
+              </div>
+
+              <div class="card" style="width: 20rem">
+                <img src="./img/e6.jpg" class="card-img-top" alt="event6" />
+                <div class="card-body">
+                  <p class="card-text">
+                    네이버페이 결제 시, 매주 영화 할인! (오프라인)
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <div class="container">
+      <footer
+        class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top"
+      >
+        <p class="col-md-4 mb-0 text-light">
+          © 2024 Hanyang Cinema. All Rights reserved
+        </p>
+
+        <ul class="nav col-md-4 justify-content-end">
+          <li class="nav-item">
+            <a href="#" class="nav-link px-2 text-light">이용약관</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link px-2 text-light">광고/제휴문의</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link px-2 text-light">개인정보처리방침</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link px-2 text-light">회사소개</a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+  </body>
+</html>
