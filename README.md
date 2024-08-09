@@ -6,7 +6,7 @@
 
 ---
 
-### skills I've learned (2024.04)
+### skills I've learned (2024.05)
 
 - **Frontend**
 
@@ -30,3 +30,22 @@
 
 ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
 ![Github](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)
+
+---
+
+### Team Projects I've contributed to
+
+#### UI/UX - EVERPOWER
+  - 2024.01.12 ~ 01.28
+    
+  [![EVERPOWER](https://github-readme-stats.vercel.app/api/pin/?username=hjinn0813&repo=EVERPOWER)](https://github.com/hjinn0813/EVERPOWER)
+
+#### Frontend - Lumipet
+  - 2024.03.13 ~ 03.28
+  
+  [![Lumipet](https://github-readme-stats.vercel.app/api/pin/?username=eun1230&repo=sessac_B_teamproject)](https://github.com/eun1230/sessac_B_teamproject)
+
+#### Frontend - BatDream
+  - 2024.04.26 ~ 05.16
+  
+  [![batdream](https://github-readme-stats.vercel.app/api/pin/?username=treasure-2u&repo=batDream)](https://github.com/treasure-2u/batDream)
