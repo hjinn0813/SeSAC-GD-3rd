@@ -1,0 +1,67 @@
+<!-- nav bar 언더라인 애니메이션, 클릭시 고정 -->
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .nav-item {
+        display: inline-block;
+        padding: 10px;
+        cursor: pointer;
+        position: relative; /* 위치 설정 */
+      }
+
+      .nav-item::after {
+        content: '';
+        position: absolute;
+        display: block;
+        bottom: 0; /* 텍스트와 간격 조절 */
+        left: 0;
+        right: auto;
+        width: 0;
+        height: 2px;
+        background-color: transparent; /* 기본적으로 투명 */
+        transition: width 250ms ease-out; /* 호버 시 애니메이션 */
+      }
+
+      /* 호버 시 언더라인 */
+      .nav-item:hover::after {
+        width: 100%;
+        background-color: pink;
+      }
+
+      /* 클릭 시 고정된 언더라인 (active 클래스) */
+      .nav-item.active::after {
+        width: 100%; /* 고정된 width */
+        background-color: pink;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li class="nav-item">Home</li>
+        <li class="nav-item">About</li>
+        <li class="nav-item">Services</li>
+        <li class="nav-item">Contact</li>
+      </ul>
+    </nav>
+    <script>
+      // 모든 nav-item 요소 가져오기
+      const navItems = document.querySelectorAll('.nav-item');
+
+      // 클릭 이벤트 추가
+      navItems.forEach((item) => {
+        item.addEventListener('click', () => {
+          // 모든 항목에서 "active" 클래스 제거
+          navItems.forEach((nav) => nav.classList.remove('active'));
+
+          // 클릭된 항목에 "active" 클래스 추가
+          item.classList.add('active');
+        });
+      });
+    </script>
+  </body>
+</html>
